@@ -1,5 +1,7 @@
 import React from "react";
 import Links from "./Links";
+import ProjectList from "./ProjectList";
+import ProjectItem from "./ProjectItem";
 
 function About({ bio, links }) {
   return (
@@ -8,6 +10,8 @@ function About({ bio, links }) {
       {bio && bio.length > 1 ? <p>{bio}</p> : null}
       <img src="https://i.imgur.com/mV8PQxj.gif" alt="I made this" />
       <Links github={links.github} linkedin={links.linkedin} />
+      <ProjectItem/>
+      <ProjectList/>
     </div>
   );
 }
